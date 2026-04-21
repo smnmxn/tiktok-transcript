@@ -1,4 +1,4 @@
-# tiktok-extractor
+# tiktok-transcript
 
 Command-line tool that prints the transcript (and optionally metadata) of a
 TikTok user's latest video — or all videos since a given date.
@@ -185,7 +185,7 @@ all other fields are still populated.
   track (music-only, very old, creator opted out). Single-video mode exits
   `2`; multi-video mode includes them with `transcript: null`. An
   audio-transcription fallback via Whisper is planned
-  (`pip install tiktok-extractor[whisper]`) but not yet implemented.
+  (`pip install tiktok-transcript[whisper]`) but not yet implemented.
 - **Rate limiting:** TikTok's WAF will throttle rapid bursts of video-page
   requests. Single-video mode makes 2–3 HTTP calls and is fine for casual
   use. `--since` over a long window makes one request per video — be nice.
@@ -195,7 +195,7 @@ all other fields are still populated.
 **`error: Could not find __UNIVERSAL_DATA_FOR_REHYDRATION__ in page`**  
 TikTok's WAF challenged the request, usually because your `curl_cffi`
 Chrome-fingerprint profile has aged. Upgrade: `uv tool upgrade
-tiktok-extractor`, or `pip install -U curl_cffi` inside the venv.
+tiktok-transcript`, or `pip install -U curl_cffi` inside the venv.
 
 **`error: User @X not found`**  
 The handle doesn't exist, is suspended, or was misspelled. Double-check on

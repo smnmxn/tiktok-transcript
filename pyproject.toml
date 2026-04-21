@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "tiktok-extractor"
+name = "tiktok-transcript"
 version = "0.1.0"
 description = "Extract the transcript of a TikTok user's latest video via native captions."
 requires-python = ">=3.10"
@@ -18,7 +18,7 @@ whisper = [
 ]
 
 [project.scripts]
-tiktok-transcript = "tiktok_extractor.cli:main"
+tiktok-transcript = "tiktok_transcript.cli:main"
 
 [tool.hatch.build.targets.wheel]
-packages = ["tiktok_extractor"]
+packages = ["tiktok_transcript"]
